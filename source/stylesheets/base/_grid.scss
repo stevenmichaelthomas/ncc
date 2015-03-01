@@ -1,0 +1,39 @@
+@mixin generate-columns($prefix, $num) {
+  $i: $num;
+
+  @while $i > 0 {
+    .#{$prefix}#{$i} {
+      @include media($tablet-up) {
+        color: $num;
+        background: $i;
+        @include span-columns($i of $num);
+      }
+    }
+
+    $i: $i - 1;
+  }
+}
+
+@include generate-columns('grid-', 12);
+
+.container {
+  @include outer-container();
+}
+
+.grid-item {
+  .container--halves {
+    @include omega(2n);
+  }
+
+  .container--thirds {
+    @include omega(3n);
+  }
+
+  .container--quarters {
+    @include omega(4n);
+  }
+}
+
+.grid--last {
+  @include omega();
+}
