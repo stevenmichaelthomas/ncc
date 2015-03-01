@@ -4,9 +4,13 @@
   @while $i > 0 {
     .#{$prefix}#{$i} {
       @include media($tablet-up) {
-        color: $num;
-        background: $i;
         @include span-columns($i of $num);
+      }
+    }
+
+    .#{$prefix}-push-#{$i} {
+      @include media($tablet-up) {
+        @include shift($i);
       }
     }
 
@@ -18,18 +22,20 @@
 
 .container {
   @include outer-container();
+
+  padding: 0 $gutter;
 }
 
 .grid-item {
-  .container--halves {
+  .container--halves & {
     @include omega(2n);
   }
 
-  .container--thirds {
+  .container--thirds & {
     @include omega(3n);
   }
 
-  .container--quarters {
+  .container--quarters & {
     @include omega(4n);
   }
 }

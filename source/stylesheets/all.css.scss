@@ -5,3 +5,46 @@
 @import "neat";
 
 @import "base/grid";
+
+.block {
+  padding: $base-spacing * 2 0;
+}
+
+.block--image {
+  background: no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+
+  @include media($tablet-up) {
+    min-height: 500px;
+  }
+}
+
+.block--cream {
+  background-color: $color-cream;
+}
+
+.block--navy {
+  background-color: $color-navy;
+  color: $color-white;
+}
+
+.block--olive {
+  background-color: $color-olive;
+  color: $color-white;
+}
+
+.hero {
+  padding: $base-spacing * 8 0;
+  @include retina-image('hero', cover, 'jpg', null, '-2x', true);
+}
+
+.hero__heading {
+  color: $color-white;
+  text-shadow: 0 1px 2px rgba(black, 0.8);
+
+  @include media($tablet-up) {
+    font-size: 3em;
+  }
+}
