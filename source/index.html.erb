@@ -1,5 +1,5 @@
 ---
-title: Welcome to Middleman
+title: Nature Conservancy of Canada
 ---
 
 <section class="block block--image hero">
@@ -8,9 +8,8 @@ title: Welcome to Middleman
   </div>
 </section>
 
-
 <section class="block">
-  <div class="container">
+  <div class="container text-center">
     <div class="grid-item grid-8 grid--push-2">
       <h2>Intro</h2>
       <p><%= lorem.sentences 5 %></p>
@@ -19,21 +18,34 @@ title: Welcome to Middleman
 </section>
 
 <section class="block block--cream">
-  <div class="container">
-    volunteer
+  <div class="container container--halves">
+    <div class="grid-item grid-6 text-split">
+      <h2>Volunteer</h2>
+      <p><%= lorem.sentences 5 %></p>
+      <div class="text-center">
+        <a href='http://www.natureconservancy.ca/en/what-you-can-do/conservation-volunteers/'>
+          <%= image_tag 'cv-button.png', alt: 'Volunteer with us' %>
+        </a>
+      </div>
+    </div>
+    <div class="grid-item grid-6">
+      <blockquote>
+        Volunteer quotes
+      </blockquote>
+    </div>
   </div>
 </section>
 
 <section class="block block--navy">
   <div class="container container--thirds">
     <div class="grid-item grid-4">
-      At home
+      <h3>At home</h3>
     </div>
     <div class="grid-item grid-4">
-      Outside
+      <h3>Outside</h3>
     </div>
     <div class="grid-item grid-4">
-      Community
+      <h3>Community</h3>
     </div>
 
     <h1>WIDGET GOES HERE</h1>
@@ -41,8 +53,13 @@ title: Welcome to Middleman
 </section>
 
 <section class="block block--olive">
-  <div class="container">
-    donate
+  <div class="container container--halves">
+    <div class="grid-item grid-6 text-split">
+      Donate text
+    </div>
+    <div class="grid-item grid-6">
+      Donate link
+    </div>
   </div>
 </section>
 

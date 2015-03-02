@@ -14,6 +14,14 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <div class="container">
+      <div id="logo">
+        <a href='http://www.natureconservancy.ca'>
+          <%= image_tag 'logo-2x.jpg', alt: 'Nature Conservancy of Canada' %>
+        </a>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

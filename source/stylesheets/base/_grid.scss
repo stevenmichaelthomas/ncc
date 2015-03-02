@@ -22,6 +22,7 @@
 
 .container {
   @include outer-container();
+  position: relative;
 
   padding: 0 $gutter;
 }

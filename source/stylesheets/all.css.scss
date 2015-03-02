@@ -6,19 +6,26 @@
 
 @import "base/grid";
 
+#logo {
+  position: absolute;
+  top: 0;
+  left: $gutter;
+  background-color: $color-white;
+  padding: 10px;
+
+  img {
+    width: 150px;
+  }
+}
+
 .block {
-  padding: $base-spacing * 2 0;
+  padding: $base-spacing * 3 0;
 }
 
 .block--image {
   background: no-repeat center center;
   background-size: cover;
-  min-height: 400px;
   text-align: center;
-
-  @include media($tablet-up) {
-    min-height: 500px;
-  }
 }
 
 .block--cream {
@@ -38,6 +45,11 @@
 .hero {
   padding: $base-spacing * 8 0;
   @include retina-image('hero', cover, 'jpg', null, '-2x', true);
+  min-height: 400px;
+
+  @include media($tablet-up) {
+    min-height: 500px;
+  }
 }
 
 .hero__heading {
@@ -47,4 +59,13 @@
   @include media($tablet-up) {
     font-size: 3em;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-split {
+  padding-right: $gutter;
+  border-right: 4px solid $color-white;
 }
