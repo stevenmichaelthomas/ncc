@@ -12,6 +12,7 @@
   left: $gutter;
   background-color: $color-white;
   padding: 10px;
+  z-index: 999;
 
   img {
     width: 150px;
@@ -19,7 +20,23 @@
 }
 
 .block {
+  position: relative;
   padding: $base-spacing * 3 0;
+  z-index: 2;
+
+  &:before {
+    background: image-url('arrow-down.svg') no-repeat center;
+    background-size: 16px 16px;
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: -22px;
+    left: 50%;
+    margin-left: -22px;
+    border-radius: 44px;
+    background-color: white;
+  }
 
   @include media($mobile) {
     text-align: center;
@@ -29,30 +46,46 @@
 .block--image {
   background: no-repeat center center;
   background-size: cover;
-  text-align: center;
 }
 
 .block--cream {
   background-color: $color-cream;
+
+  &:before {
+    background-color: $color-cream;
+  }
 }
 
 .block--navy {
   background-color: $color-navy;
   color: $color-white;
+
+  &:before {
+    background-color: $color-navy;
+  }
 }
 
-.block--olive {
-  background-color: $color-olive;
+.block--donate {
+  @include retina-image('donate-bg', cover, 'jpg', null, '-2x', true);
   color: $color-white;
+
+  &:before {
+    background-color: $color-olive;
+  }
 }
 
 .hero {
   padding: $base-spacing * 8 0;
   @include retina-image('hero', cover, 'jpg', null, '-2x', true);
   min-height: 400px;
+  text-align: center;
 
   @include media($tablet-up) {
     min-height: 500px;
+  }
+
+  &:before {
+    display: none;
   }
 }
 
@@ -114,4 +147,100 @@ blockquote {
   text-align: right;
   font-style: italic;
   margin-right: 50px;
+}
+
+.pledge {
+  margin-bottom: 80px;
+}
+
+.pledge-icon {
+  margin-bottom: $base-spacing;
+}
+
+.ribbon {
+   width: 200px;
+   left: 50%;
+   margin-left: -100px;
+   position: absolute;
+   text-align: center;
+   font-size: 18px!important;
+   background: #ffffff;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+   background: -webkit-linear-gradient(top, #ffffff, #ffffff);
+   background: -moz-linear-gradient(top, #ffffff, #ffffff);
+   background: -ms-linear-gradient(top, #ffffff, #ffffff);
+   background: -o-linear-gradient(top, #ffffff, #ffffff);
+   background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+   -webkit-box-shadow: rgba(000,000,000,0.3) 0 0px 0px;
+   -moz-box-shadow: rgba(000,000,000,0.3) 0 0px 0px;
+   box-shadow: rgba(000,000,000,0.3) 0 0px 0px;
+   font-family: 'Helvetica Neue',Helvetica, sans-serif;
+   }
+.ribbon h2 {
+   font-size: 25px!important;
+   color: #000000;
+   text-shadow: #ffffff 0 1px 0;
+   margin:0px;
+   padding: 5px 10px;
+   }
+.ribbon:before, .ribbon:after {
+   content: '';
+   position: absolute;
+   display: block;
+   bottom: -1em;
+   border: 1.5em solid #ffffff;
+   z-index: 0;
+   }
+.ribbon:before {
+   left: -2em;
+   border-right-width: 1.5em;
+   border-left-color: transparent;
+   -webkit-box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+   -moz-box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+   box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+   }
+.ribbon:after {
+   right: -2em;
+   border-left-width: 1.5em;
+   border-right-color: transparent;
+   -webkit-box-shadow: rgba(000,000,000,0.4) -0px 0px 0px;
+   -moz-box-shadow: rgba(000,000,000,0.4) -0px 0px 0px;
+   box-shadow: rgba(000,000,000,0.4) -0px 0px 0px;
+   }
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+   border-color: #cccccc transparent transparent transparent;
+   position: absolute;
+   display: block;
+   border-style: solid;
+   bottom: -1em;
+   content: '';
+   z-index: 1;
+   }
+.ribbon .ribbon-content:before {
+   left: 0;
+   border-width: 1em 0 0 1em;
+   }
+.ribbon .ribbon-content:after {
+   right: 0;
+   border-width: 1em 1em 0 0;
+   }
+.ribbon-stitches-top {
+   margin-top:2px;
+   border-top: 0px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+   }
+.ribbon-stitches-bottom {
+   margin-bottom:2px;
+   border-top: 0px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+   }
+
+iframe {
+  clear: both;
+  width: 100%;
+  border: none;
 }

@@ -28,6 +28,8 @@
 }
 
 .grid-item {
+  position: relative;
+
   .container--halves & {
     @include omega(2n);
   }
@@ -39,6 +41,18 @@
   .container--quarters & {
     @include omega(4n);
   }
+}
+
+.grid-half--marginless-left {
+  padding-right: $gutter;
+  width: 50%;
+  float: left;
+}
+
+.grid-half--marginless-right {
+  padding-left: $gutter;
+  width: 50%;
+  float: left;
 }
 
 .grid--last {

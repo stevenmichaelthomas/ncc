@@ -19,7 +19,7 @@ title: Nature Conservancy of Canada
 
 <section class="block block--cream">
   <div class="container container--halves">
-    <div class="grid-item grid-6 text-split">
+    <div class="grid-item grid-half--marginless-left text-split">
       <h2>Volunteer</h2>
       <p><%= lorem.sentences 5 %></p>
       <div class="text-center">
@@ -28,7 +28,7 @@ title: Nature Conservancy of Canada
         </a>
       </div>
     </div>
-    <div class="grid-item grid-6">
+    <div class="grid-item grid-half--marginless-right">
       <blockquote>
         <%= lorem.sentences 1 %>
         <span class="blockquote-triangle"></span>
@@ -39,34 +39,72 @@ title: Nature Conservancy of Canada
 </section>
 
 <section class="block block--navy">
-  <div class="container container--thirds">
+  <div class="container container--thirds text-center">
     <div class="grid-item grid-4">
-      <h3>At home</h3>
-    </div>
-    <div class="grid-item grid-4">
-      <h3>Outside</h3>
-    </div>
-    <div class="grid-item grid-4">
-      <h3>Community</h3>
+      <div class="pledge">
+        <%= image_tag 'pledge1.png', class: 'pledge-icon' %>
+
+        <div class="ribbon">
+          <strong class="ribbon-content">
+            <h2>At home</h2>
+          </strong>
+        </div>
+      </div>
+
+      <p><%= lorem.sentences 2 %></p>
     </div>
 
-    <h1>WIDGET GOES HERE</h1>
+    <div class="grid-item grid-4">
+      <div class="pledge">
+        <%= image_tag 'pledge2.png', class: 'pledge-icon' %>
+
+        <div class="ribbon">
+          <strong class="ribbon-content">
+            <h2>Outside</h2>
+          </strong>
+        </div>
+      </div>
+
+      <p><%= lorem.sentences 2 %></p>
+    </div>
+
+    <div class="grid-item grid-4">
+      <div class="pledge">
+        <%= image_tag 'pledge3.png', class: 'pledge-icon' %>
+        <div class="ribbon">
+          <strong class="ribbon-content">
+            <h2>Community</h2>
+          </strong>
+        </div>
+      </div>
+
+      <p><%= lorem.sentences 2 %></p>
+    </div>
+
+    <iframe src='http://www.e-activist.com/ea-action/widget?widgetId=2330'></iframe>
   </div>
 </section>
 
-<section class="block block--olive">
+<section class="block block--image block--donate">
   <div class="container container--halves">
-    <div class="grid-item grid-6 text-split">
-      Donate text
+    <div class="grid-item grid-half--marginless-left text-split">
+      <h2>About NCC</h2>
+      <p><%= lorem.sentences 5 %></p>
     </div>
-    <div class="grid-item grid-6">
-      Donate link
+    <div class="grid-item grid-half--marginless-right">
+      <h2>Donate</h2>
+      <p><%= lorem.sentences 2 %></p>
+      <div class="text-center">
+        <a href='https://donate.natureconservancy.ca/ea-action/action?ea.client.id=1803&ea.campaign.id=21474&_ga=1.24758714.1263474804.1423013933'>
+          <%= image_tag 'ncc-donate-button.png', alt: 'Donate' %>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="block">
   <div class="container">
-    footer
+    FOOTER
   </div>
 </section>
