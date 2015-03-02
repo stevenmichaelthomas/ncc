@@ -20,6 +20,10 @@
 
 .block {
   padding: $base-spacing * 3 0;
+
+  @include media($mobile) {
+    text-align: center;
+  }
 }
 
 .block--image {
@@ -66,6 +70,48 @@
 }
 
 .text-split {
-  padding-right: $gutter;
-  border-right: 4px solid $color-white;
+  @include media($tablet-up) {
+    padding-right: $gutter;
+    border-right: 4px solid $color-white;
+  }
+}
+
+blockquote {
+  position: relative;
+  background: $color-white;
+  padding: $gutter * 2;
+  margin-bottom: $gutter * 2.5;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    content: '\201C';
+    font-size: 65px;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: -36px;
+    right: 20px;
+    content: '\201D';
+    font-size: 65px;
+  }
+}
+
+.blockquote-triangle {
+  position: absolute;
+  top: 100%;
+  right: $gutter * 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.blockquote-attribution {
+  text-align: right;
+  font-style: italic;
+  margin-right: 50px;
 }
