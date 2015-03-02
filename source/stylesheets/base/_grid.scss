@@ -44,15 +44,19 @@
 }
 
 .grid-half--marginless-left {
-  padding-right: $gutter;
-  width: 50%;
-  float: left;
+  @include media($tablet-up) {
+    padding-right: $gutter;
+    width: 50%;
+    float: left;
+  }
 }
 
 .grid-half--marginless-right {
-  padding-left: $gutter;
-  width: 50%;
-  float: left;
+  @include media($tablet-up) {
+    padding-left: $gutter;
+    width: 50%;
+    float: left;
+  }
 }
 
 .grid--last {
