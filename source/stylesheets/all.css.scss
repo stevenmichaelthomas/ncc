@@ -10,12 +10,18 @@
   position: absolute;
   top: 0;
   left: $gutter;
-  background-color: rgba(white, 0.3);
+
+  background-color: white;
   padding: 10px;
   z-index: 999;
 
   img {
     width: 150px;
+  }
+
+  @include media($mobile) {
+    left: 50%;
+    margin-left: -85px;
   }
 }
 
@@ -40,7 +46,10 @@
     background-color: white;
     font-weight: bold;
     font-size: 30px;
+  }
 
+  h2 {
+    text-align: center;
   }
 
   @include media($mobile) {
@@ -70,7 +79,7 @@
   background-color: $color-cream;
 
   &:before {
-    background-color: $color-cream;
+    background-color: darken($color-cream, 5%);
   }
 }
 
@@ -79,7 +88,7 @@
   color: $color-white;
 
   &:before {
-    background-color: $color-navy;
+    background-color: darken($color-navy, 5%);
   }
 }
 
@@ -88,7 +97,7 @@
   color: $color-white;
 
   &:before {
-    background-color: $color-olive;
+    background-color: darken($color-olive, 5%);
   }
 }
 
@@ -128,19 +137,16 @@
   color: $color-white;
   text-shadow: 0 1px 2px rgba(black, 0.4);
   line-height: 1.1em;
+  display: inline-block;
 
   @include media($tablet-up) {
     font-size: 3em;
-    padding: 30px;
-    background: rgba(white, 0.3);
-    position: absolute;
+    padding: 50px 60px;
     right: 10%;
     top: -$base-spacing;
-    width: 30%;
-    text-align: left;
 
     > span {
-      display: block;
+      // display: block;
     }
   }
 }
@@ -232,21 +238,17 @@ iframe {
   }
 }
 
-// .hero--dark:before {
-//   display: block;
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(black, 0.6);
-//   border-radius: 0;
-//   margin-left: 0;
-
-// }
 .loading {
   text-align: center;
   position: absolute;
   width: 100%;
+}
+
+.footer-logo {
+  background-color: white;
+  padding: 10px;
+}
+
+strong {
+  font-weight: bold;
 }
