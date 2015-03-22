@@ -4,106 +4,89 @@ title: Nature Conservancy of Canada
 
 <section class="block block--image hero">
   <div class="container">
-    <h1 class='hero__heading'>Lend a hand for nature</h1>
+    <h1 class='hero__heading'>
+      <span>Lend</span>
+      <span>a</span>
+      <span>hand </span>
+      <span>for </span>
+      <span>nature</span>
+    </h1>
   </div>
 </section>
 
 <section class="block">
-  <div class="container text-center">
+  <div class="container">
     <div class="grid-item grid-8 grid--push-2">
       <h2>Intro</h2>
-      <p><%= lorem.sentences 5 %></p>
+      <p>
+        Change can happen at all levels; from a community project, to a full on
+        global movement–it all starts with a big heart and a helping hand. In
+        the spirit of National Volunteer Week, the Nature Conservancy of Canada
+        (NCC) is asking Canadians to lend their helping hands to support our
+        country’s most sensitive natural spaces – with a commitment as simple as
+        1, 2, 3!
+      </p>
+      <p>
+        By volunteering, pledging your commitment or donating, you are helping
+        protect Canada’s nature for now and for future generations.
+      </p>
+      <p>
+        You have the opportunity to making change happen, so get started below
+        and lend a hand for nature!
+      </p>
     </div>
   </div>
 </section>
 
-<section class="block block--cream">
-  <div class="container container--halves">
-    <div class="grid-item grid-half--marginless-left text-split">
+<section class="block block--olive block--one">
+  <div class="container">
+    <div class="grid-item grid-8 grid--push-2">
       <h2>Volunteer</h2>
-      <p><%= lorem.sentences 5 %></p>
+      <p>
+        By signing up for an NCC Conservation Volunteers event, you will
+        contribute to on-the-ground conservation work happening around you.
+      </p>
+
       <div class="text-center">
-        <a href='http://www.natureconservancy.ca/en/what-you-can-do/conservation-volunteers/'>
-          <%= image_tag 'cv-button.png', alt: 'Volunteer with us' %>
-        </a>
+        <%= link_to 'Sign up now', 'http://www.natureconservancy.ca/en/what-you-can-do/conservation-volunteers', class: 'btn btn--light' %>
       </div>
-    </div>
-    <div class="grid-item grid-half--marginless-right">
-      <blockquote>
-        <%= lorem.sentences 1 %>
-        <span class="blockquote-triangle"></span>
-      </blockquote>
-      <p class='blockquote-attribution'>Nadia Alam - Current employee</p>
     </div>
   </div>
 </section>
 
-<section class="block block--navy">
-  <div class="container container--thirds text-center">
-    <div class="grid-item grid-4">
-      <div class="pledge">
-        <%= image_tag 'pledge1.png', class: 'pledge-icon' %>
-
-        <div class="ribbon">
-          <strong class="ribbon-content">
-            <h2>At home</h2>
-          </strong>
-        </div>
+<section class="block block--navy block--two">
+  <div class="container">
+    <div class="grid-item grid-8 grid--push-2">
+      <h2>Take the pledge</h2>
+      <p>
+        Lend a hand for nature on your own time, with the activities of your
+        choice!  Pledge to complete up to 10 activities to throughout the spring
+        season + receive access to free NCC Earth Day e-cards!
+      </p>
+      <div class="text-center">
+        <%= link_to 'Take the pledge', '/pledge.html', class: 'btn btn--light' %>
       </div>
-
-      <p><%= lorem.sentences 2 %></p>
     </div>
+  </div>
+</section>
 
-    <div class="grid-item grid-4">
-      <div class="pledge">
-        <%= image_tag 'pledge2.png', class: 'pledge-icon' %>
+<section class="block block--cream block--three">
+  <div class="container">
+    <div class="grid-item grid-8 grid--push-2">
+      <h2>Donate</h2>
+      <p>
+        Every donation – big and small – helps fund NCC’s critical conservation
+        work from coast to coast. Just $5 will go a long way!
+      </p>
 
-        <div class="ribbon">
-          <strong class="ribbon-content">
-            <h2>Outside</h2>
-          </strong>
-        </div>
+      <div class="text-center">
+        <%= link_to 'Donate now', 'https://donate.natureconservancy.ca/ea-action/action?ea.client.id=1803&ea.campaign.id=21474&_ga=1.267968654.1263474804.1423013933', class: 'btn' %>
       </div>
-
-      <p><%= lorem.sentences 2 %></p>
     </div>
-
-    <div class="grid-item grid-4">
-      <div class="pledge">
-        <%= image_tag 'pledge3.png', class: 'pledge-icon' %>
-        <div class="ribbon">
-          <strong class="ribbon-content">
-            <h2>Community</h2>
-          </strong>
-        </div>
-      </div>
-
-      <p><%= lorem.sentences 2 %></p>
-    </div>
-
-    <iframe src='http://www.e-activist.com/ea-action/widget?widgetId=2330'></iframe>
   </div>
 </section>
 
 <section class="block block--image block--donate">
-  <div class="container container--halves">
-    <div class="grid-item grid-half--marginless-left text-split">
-      <h2>About NCC</h2>
-      <p><%= lorem.sentences 5 %></p>
-    </div>
-    <div class="grid-item grid-half--marginless-right">
-      <h2>Donate</h2>
-      <p><%= lorem.sentences 2 %></p>
-      <div class="text-center">
-        <a href='https://donate.natureconservancy.ca/ea-action/action?ea.client.id=1803&ea.campaign.id=21474&_ga=1.24758714.1263474804.1423013933'>
-          <%= image_tag 'ncc-donate-button.png', alt: 'Donate' %>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block">
   <div class="container">
     FOOTER
   </div>

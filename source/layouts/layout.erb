@@ -10,18 +10,21 @@
     <title><%= current_page.data.title || "Nature Conservancy of Canada" %></title>
 
     <%= stylesheet_link_tag "all" %>
-    <%= javascript_include_tag  "all" %>
+
   </head>
 
   <body class="<%= page_classes %>">
     <div class="container">
       <div id="logo">
         <a href='http://www.natureconservancy.ca'>
-          <%= image_tag 'logo-2x.jpg', alt: 'Nature Conservancy of Canada' %>
+          <%= image_tag 'logo-2x.png', alt: 'Nature Conservancy of Canada' %>
         </a>
       </div>
     </div>
 
     <%= yield %>
+
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" %>
+    <%= javascript_include_tag  "all" %>
   </body>
 </html>
