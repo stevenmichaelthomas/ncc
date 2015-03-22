@@ -73,6 +73,7 @@ input[type="file"] {
 
 select {
   margin-bottom: $base-spacing;
-  max-width: 100%;
   width: auto;
+  max-width: 100%;
+  min-width: 300px;
 }

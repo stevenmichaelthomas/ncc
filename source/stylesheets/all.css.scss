@@ -74,6 +74,11 @@
   }
 }
 
+.block--form {
+  padding: $base-spacing * 4 0;
+  text-align: left;
+}
+
 .hero {
   padding: $base-spacing * 8 0;
   @include retina-image('hero', cover, 'jpg', null, '-2x', true);
