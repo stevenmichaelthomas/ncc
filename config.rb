@@ -18,14 +18,7 @@ set :fonts_dir, 'fonts'
 
 # Build-specific configuration
 configure :build do
-  activate :gzip
-
-  activate :asset_hash
-
-  activate :minify_css
-  activate :minify_javascript
-
-  set :http_prefix, '/build'
+  set :http_prefix, '/'
 end
 
 Fog.credentials = { path_style: true }
@@ -37,5 +30,5 @@ activate :sync do |sync|
   sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
   sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
   sync.existing_remote_files = 'ignore'
-  sync.after_build = true
+  sync.after_build = false
 end

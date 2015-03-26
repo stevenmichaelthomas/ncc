@@ -39,12 +39,8 @@ title: Pledge - Nature Conservancy of Canada
         <span><%= i + 1 %></span>
         <p class='pledge-block__title'><%= pledge.name %></p>
         <p class='pledge-block__content'><%= pledge.content %></p>
-
         <%= link_to 'See our resource here', pledge.link, target: '_blank' %>
-
-        <% if pledge.link_2.present? %>
-          <%= link_to 'Find more inspiration here', pledge.link_2, target: '_blank' %>
-        <% end %>
+        <% if pledge.link_2.present? %><%= link_to 'Find more inspiration here', pledge.link_2, target: '_blank' %><% end %>
       </div>
     <% end %>
   </div>

@@ -14,7 +14,6 @@
   position: absolute;
   top: 0;
   right: $gutter;
-
   background-color: white;
   padding: 10px;
   z-index: 999;
@@ -130,7 +129,7 @@
 
 .hero {
   position: relative;
-  background-image: image-url('hero-alt.jpg');
+  background-image: image-url('hero.jpg');
   background-size: cover;
   min-height: 250px;
   text-align: left;
