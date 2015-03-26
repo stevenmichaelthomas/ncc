@@ -5,7 +5,7 @@ title: Pledge - Nature Conservancy of Canada
 <section class="block block--image hero hero--with-block">
   <div class="container">
     <div class="hero__block">
-      <h2>Take the pledge</h2>
+      <h2>Lend a Hand for Nature</h2>
       <p>
         Want to lend a hand for nature, but on your own time? No problem!
         Simply, select up to 10 of activities below, submit your pledge and get
@@ -21,10 +21,32 @@ title: Pledge - Nature Conservancy of Canada
 
 <section class='block block--cream'>
   <div class="container container--form">
+    <h2>Take the pledge</h2>
+
     <div class='loading'>Loading form...</div>
     <iframe title='Lend A Hand For Nature'
       src='http://www.e-activist.com/ea-action/widget?widgetId=3462'
       frameborder='0' scrolling='no'></iframe>
+  </div>
+</section>
+
+<section class='block block--olive'>
+  <div class="container">
+    <h2>Pledge activities</h2>
+
+    <% data.pledge.each_with_index do |pledge, i| %>
+      <div class="grid-item grid-5 pledge-block <%= 'grid--push-1' if i % 2 == 0 %>">
+        <span><%= i + 1 %></span>
+        <p class='pledge-block__title'><%= pledge.name %></p>
+        <p class='pledge-block__content'><%= pledge.content %></p>
+
+        <%= link_to 'See our resource here', pledge.link, target: '_blank' %>
+
+        <% if pledge.link_2.present? %>
+          <%= link_to 'Find more inspiration here', pledge.link_2, target: '_blank' %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </section>
 
