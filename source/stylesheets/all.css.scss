@@ -6,10 +6,14 @@
 
 @import "base/grid";
 
+// =============================================================================
+// Logo
+// =============================================================================
+
 #logo {
   position: absolute;
   top: 0;
-  left: $gutter;
+  right: $gutter;
 
   background-color: white;
   padding: 10px;
@@ -20,10 +24,14 @@
   }
 
   @include media($mobile) {
-    left: 50%;
-    margin-left: -85px;
+    right: 50%;
+    margin-right: -85px;
   }
 }
+
+// =============================================================================
+// Blocks
+// =============================================================================
 
 .block {
   position: relative;
@@ -71,7 +79,8 @@
 }
 
 .block--image {
-  background: no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -115,15 +124,34 @@
   text-align: left;
 }
 
+// =============================================================================
+// Hero
+// =============================================================================
+
 .hero {
   position: relative;
-  @include retina-image('hero', cover, 'jpg', null, '-2x', true);
-  background-position: left bottom;
-  min-height: 300px;
-  text-align: center;
+  background-image: image-url('hero-alt.jpg');
+  background-size: cover;
+  min-height: 250px;
+  text-align: left;
+  padding: 0;
 
   @include media($tablet-up) {
-    min-height: 400px;
+    height: 250px;
+  }
+
+  @include media($mobile) {
+    padding: 50px 0;
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    span {
+      font-family: 'Franklin Demi';
+      line-height: 1.0em;
+    }
   }
 
   &:before {
@@ -131,25 +159,70 @@
   }
 }
 
+.hero--with-block {
+  @include media($tablet-up) {
+    height: auto;
+    padding: 70px 0;
+  }
+}
+
 .hero__heading {
   padding: $base-spacing 0;
-  text-transform: uppercase;
   color: $color-white;
   text-shadow: 0 1px 2px rgba(black, 0.4);
-  line-height: 1.1em;
+  line-height: 1.4em;
   display: inline-block;
 
   @include media($tablet-up) {
     font-size: 3em;
-    padding: 50px 60px;
-    right: 10%;
-    top: -$base-spacing;
+    padding: 10px 0;
+    width: 370px;
 
     > span {
-      // display: block;
+      font-size: 85px;
+      font-weight: normal;
     }
   }
 }
+
+@include media($tablet-up) {
+  .hero__heading__primary {
+    font-family: "Franklin Demi";
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.hero__block {
+  color: black;
+  padding: 45px;
+  background: rgba(white, 0.9);
+
+  @include media($tablet-up) {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@include media($tablet-up) {
+  .lend {
+    color: $color-olive;
+    letter-spacing: 5px;
+  }
+
+  .hand {
+    color: $color-navy;
+  }
+
+  .nature {
+    color: $color-cream;
+    letter-spacing: 5px;
+  }
+}
+
+// =============================================================================
+// Text helper classes and typography
+// =============================================================================
 
 .text-center {
   text-align: center;
@@ -162,45 +235,13 @@
   }
 }
 
-blockquote {
-  position: relative;
-  background: $color-white;
-  padding: $gutter * 2;
-  margin-bottom: $gutter * 2.5;
-
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    content: '\201C';
-    font-size: 65px;
-  }
-
-  &:after {
-    position: absolute;
-    bottom: -36px;
-    right: 20px;
-    content: '\201D';
-    font-size: 65px;
-  }
+strong {
+  font-weight: bold;
 }
 
-.blockquote-triangle {
-  position: absolute;
-  top: 100%;
-  right: $gutter * 2;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 50px 50px 0;
-  border-color: transparent #ffffff transparent transparent;
-}
-
-.blockquote-attribution {
-  text-align: right;
-  font-style: italic;
-  margin-right: 50px;
-}
+// =============================================================================
+// Form page
+// =============================================================================
 
 iframe {
   clear: both;
@@ -225,19 +266,6 @@ iframe {
   }
 }
 
-.hero__block {
-  color: black;
-
-
-  padding: 30px;
-  background: rgba(white, 0.9);
-
-  @include media($tablet-up) {
-    width: 600px;
-    margin: 0 auto;
-  }
-}
-
 .loading {
   text-align: center;
   position: absolute;
@@ -247,8 +275,4 @@ iframe {
 .footer-logo {
   background-color: white;
   padding: 10px;
-}
-
-strong {
-  font-weight: bold;
 }

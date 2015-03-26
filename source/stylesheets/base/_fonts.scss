@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Franklin';
+    src: font-url('FranklinGothic-Book-webfont.eot');
+    src: font-url('FranklinGothic-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('FranklinGothic-Book-webfont.woff2') format('woff2'),
+         font-url('FranklinGothic-Book-webfont.woff') format('woff'),
+         font-url('FranklinGothic-Book-webfont.ttf') format('truetype'),
+         font-url('FranklinGothic-Book-webfont.svg#franklin_gothic_fsbook') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Franklin Demi';
+    src: font-url('FranklinGothic-Demi-webfont.eot');
+    src: font-url('FranklinGothic-Demi-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('FranklinGothic-Demi-webfont.woff2') format('woff2'),
+         font-url('FranklinGothic-Demi-webfont.woff') format('woff'),
+         font-url('FranklinGothic-Demi-webfont.ttf') format('truetype'),
+         font-url('FranklinGothic-Demi-webfont.svg#franklin_gothic_fsdemi') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
